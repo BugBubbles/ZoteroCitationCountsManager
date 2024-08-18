@@ -22,6 +22,7 @@ async function startup({ id, version, rootURI }) {
     ),
     pluginID: id,
     dataProvider: (item) => ZoteroCitationCounts.getCitationCount(item),
+    zoteroPersist: ['width', 'hidden', 'sortDirection'], // persist the column properties
   });
 
   itemObserver = Zotero.Notifier.registerObserver(
